@@ -18,11 +18,10 @@ const Contact = () => {
     <div>
       <section className="bg-gray-50 w-[90%] mx-[5%] my-5 rounded-lg" style={divStyles}>
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="w-full">
+            <h2 className='text-center font-bold text-[30px]'>We're on standby to answer all your questions</h2>
+          </div>
           <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
-            <div className="w-full">
-              <h2 className='text-center font-bold text-[30px]'>We're on standby to answer all your questions</h2>
-            </div>
-
             <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
               <form action="#" className="space-y-4">
                 <div>
