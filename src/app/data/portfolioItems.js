@@ -1,6 +1,7 @@
 import tours from '../../../public/tours-and-travels.png'
 import coffee from '../../../public/coffee-shop.png'
 import food from '../../../public/food-shop.png'
+import ecommerce from '../../../public/e-commerce.png'
 
 export const portfolio = [
     {
@@ -30,5 +31,12 @@ export const portfolio = [
         image: {src: 'https://hannah-muthoni-hailu.github.io/hannahhailu.github.io/images/newssite.PNG'},
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?',
         link: 'https://news-site-oha0.onrender.com/'
+    },
+    {
+        id: 5,
+        title: 'E-Commerce App',
+        image: ecommerce,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?',
+        link: 'https://e-commerce-app-github-io.onrender.com/'
     }
 ]
