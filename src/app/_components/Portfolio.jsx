@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import { portfolio } from '../data/portfolioItems'
-import tours from '../../../public/tours-and-travels.png'
 
 const Portfolio = () => {
   const [data] = useState(portfolio);
