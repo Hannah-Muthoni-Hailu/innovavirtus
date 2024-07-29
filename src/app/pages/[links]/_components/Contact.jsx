@@ -1,3 +1,5 @@
+'use client';
+
 import { Input } from 'postcss';
 import React from 'react'
 
