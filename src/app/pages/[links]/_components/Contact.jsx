@@ -1,17 +1,46 @@
-import { Input } from 'postcss';
-import React from 'react'
+'use client'
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const divStyles = {
     boxShadow: '1px 1px 20px #9DF7FB',
   };
 
-  function handleSubmit(){
-    setTimeout(()=>{
-      alert('Your email has been sent')
-    }, 1000);
-    window.location.reload();
-  }
+  const form = useRef();
+  const [selectedService, setSelectedService] = useState('');
+
+  const handleServiceChange = (e) => {
+    setSelectedService(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(form.current);
+    console.log("Selected Service:", selectedService);
+
+    emailjs
+      .sendForm('service_wmto8vr', 'template_19lmzza', form.current, {
+        publicKey: 'CkbflwMcZCLfFfFh4',
+      })
+      .then(
+        () => {
+          alert('Your email has been sent!');
+          window.location.reload();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('An error occurred!')
+        },
+      );
+  };
+
+  const getLabelClassName = (service) => {
+    return `block w-full cursor-pointer rounded-lg border p-3 text-gray-600 hover:border-black ${
+      selectedService === service ? 'border-black bg-black text-white' : 'border-gray-200'
+    }`;
+  };
+
   return (
     <div>
       <section className="bg-gray-50 w-[90%] mx-[5%] my-5 rounded-lg" style={divStyles}>
@@ -22,7 +51,7 @@ const Contact = () => {
             </div>
 
             <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-              <form action="#" className="space-y-4">
+              <form ref={form} className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <label className="sr-only" htmlFor="name">Name</label>
                   <input
@@ -30,6 +59,7 @@ const Contact = () => {
                     placeholder="Name"
                     type="text"
                     id="name"
+                    name="name"
                   />
                 </div>
 
@@ -41,6 +71,7 @@ const Contact = () => {
                       placeholder="Email address"
                       type="email"
                       id="email"
+                      name="email"
                     />
                   </div>
 
@@ -51,6 +82,7 @@ const Contact = () => {
                       placeholder="Phone Number"
                       type="tel"
                       id="phone"
+                      name="number"
                     />
                   </div>
                 </div>
@@ -58,36 +90,54 @@ const Contact = () => {
                 <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
                   <div>
                     <label
-                      htmlFor="Option1"
-                      className="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
+                      htmlFor="inquiry"
+                      className={getLabelClassName('inquiry')}
                       tabIndex="0"
                     >
-                      <input className="sr-only" id="inquiry" type="radio" tabIndex="-1" name="option" />
-
+                      <input 
+                        className="sr-only" 
+                        id="inquiry" 
+                        type="radio" 
+                        name="service" 
+                        value="inquiry" 
+                        onChange={handleServiceChange}
+                      />
                       <span className="text-sm"> Inquiry </span>
                     </label>
                   </div>
 
                   <div>
                     <label
-                      htmlFor="Option2"
-                      className="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
+                      htmlFor="order"
+                      className={getLabelClassName('order')}
                       tabIndex="0"
                     >
-                      <input className="sr-only" id="order" type="radio" tabIndex="-1" name="option" />
-
+                      <input 
+                        className="sr-only" 
+                        id="order" 
+                        type="radio" 
+                        name="service" 
+                        value="order" 
+                        onChange={handleServiceChange}
+                      />
                       <span className="text-sm"> Order </span>
                     </label>
                   </div>
 
                   <div>
                     <label
-                      htmlFor="Option3"
-                      className="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
+                      htmlFor="complaint"
+                      className={getLabelClassName('complaint')}
                       tabIndex="0"
                     >
-                      <input className="sr-only" id="complaint" type="radio" tabIndex="-1" name="option" />
-
+                      <input 
+                        className="sr-only" 
+                        id="complaint" 
+                        type="radio" 
+                        name="service" 
+                        value="complaint" 
+                        onChange={handleServiceChange}
+                      />
                       <span className="text-sm"> Complaint </span>
                     </label>
                   </div>
@@ -95,18 +145,17 @@ const Contact = () => {
 
                 <div>
                   <label className="sr-only" htmlFor="message">Message</label>
-
                   <textarea
                     className="w-full rounded-lg border-gray-200 p-3 text-sm border"
                     placeholder="Message"
                     rows="8"
                     id="message"
+                    name="message"
                   ></textarea>
                 </div>
 
                 <div className="mt-4">
                   <button
-                    onClick={handleSubmit}
                     type="submit"
                     className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto hover:bg-teal-500 hover:text-black"
                   >
@@ -119,7 +168,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
