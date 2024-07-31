@@ -8,8 +8,7 @@ const About = () => {
       </div>
       <div className='w-[55%] mx-20'>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus modi debitis quod ipsum voluptatibus possimus voluptate. Dolorem deleniti quaerat amet nesciunt voluptatibus inventore accusamus impedit, alias officia qui aperiam possimus?
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus modi debitis quod ipsum voluptatibus possimus voluptate. Dolorem deleniti quaerat amet nesciunt voluptatibus inventore accusamus impedit, alias officia qui aperiam possimus?
+        At InnovaVirtus, we are passionate about transforming ideas into digital realities. Specializing in cutting-edge web development, our team of expert developers, designers, and strategists collaborate to create stunning, user-friendly websites tailored to your unique needs. From sleek corporate websites to dynamic e-commerce platforms, our services cover the full spectrum of web development.
         </p>
       </div>
       
