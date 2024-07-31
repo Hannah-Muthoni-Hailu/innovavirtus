@@ -20,11 +20,7 @@ const Footer = () => {
                 </li>
 
                 <li>
-                    <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Terms and Services </a>
-                </li>
-
-                <li>
-                    <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Advertising Disclosure </a>
+                    <a className="text-gray-700 transition hover:text-gray-700/75" href="https://www.termsfeed.com/live/6ac1ed65-f635-4884-affd-0e97ef60e45b"> Terms and Services </a>
                 </li>
                 </ul>
 
