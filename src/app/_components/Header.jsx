@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react'
 import Image from 'next/image'
 
@@ -18,15 +20,15 @@ const Header = () => {
                     <nav aria-label="Global">
                     <ul className="flex items-center gap-6 text-sm">
                         <li>
-                        <a className="text-gray-500 transition hover:text-teal-500" href="#about"> About Us </a>
+                        <a className="text-gray-500 transition hover:text-teal-500" href="/#about"> About Us </a>
                         </li>
 
                         <li>
-                        <a className="text-gray-500 transition hover:text-teal-500" href="#services"> Our Services </a>
+                        <a className="text-gray-500 transition hover:text-teal-500" href="/#services"> Our Services </a>
                         </li>
 
                         <li>
-                        <a className="text-gray-500 transition hover:text-teal-500" href="#portfolio"> Portfolio </a>
+                        <a className="text-gray-500 transition hover:text-teal-500" href="/#portfolio"> Portfolio </a>
                         </li>
 
                         <li>

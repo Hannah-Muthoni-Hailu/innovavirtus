@@ -16,15 +16,11 @@ const Footer = () => {
 
                 <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
                 <li>
-                    <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Privay Policy </a>
+                    <a className="text-gray-700 transition hover:text-gray-700/75" href="https://www.termsfeed.com/live/58409b5a-b4ad-4c91-bf04-3e220d06ceca"> Privay Policy </a>
                 </li>
 
                 <li>
-                    <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Terms and Services </a>
-                </li>
-
-                <li>
-                    <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Advertising Disclosure </a>
+                    <a className="text-gray-700 transition hover:text-gray-700/75" href="https://www.termsfeed.com/live/6ac1ed65-f635-4884-affd-0e97ef60e45b"> Terms and Services </a>
                 </li>
                 </ul>
 
