@@ -38,5 +38,12 @@ export const portfolio = [
         image: {src: 'https://hannah-muthoni-hailu.github.io/hannahhailu.github.io/images/e-commerce.PNG'},
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?',
         link: 'https://e-commerce-app-github-io.onrender.com/'
+    },
+    {
+        id: 6,
+        title: 'Portfolio Site',
+        image: {src: 'https://hannah-muthoni-hailu.github.io/hannahhailu.github.io/images/portfolio-one.PNG'},
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?',
+        link: 'https://portfolio-example-lzuo.onrender.com'
     }
 ]
